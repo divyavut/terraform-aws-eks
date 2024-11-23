@@ -1,6 +1,6 @@
 # create Ingress controller security group
 module "ingress_alb_sg" {
-    source = "git::https://github.com/divyavut/terraform-aws-sg-module.git?ref=main"
+    source = "git::https://github.com/divyavut/terraform-aws-sg.git?ref=main"
     sg_name = "ingress-alb"
     project_name = var.project_name
     environment = var.environment
@@ -8,7 +8,7 @@ module "ingress_alb_sg" {
 }
 # create node group security group
 module "node_sg" {
-    source = "git::https://github.com/divyavut/terraform-aws-sg-module.git?ref=main"
+    source = "git::https://github.com/divyavut/terraform-aws-sg.git?ref=main"
     sg_name = "node"
     project_name = var.project_name
     environment = var.environment
@@ -16,7 +16,7 @@ module "node_sg" {
 }
 # create EKS control plane security group
 module "eks_control_plane_sg" {
-    source = "git::https://github.com/divyavut/terraform-aws-sg-module.git?ref=main"
+    source = "git::https://github.com/divyavut/terraform-aws-sg.git?ref=main"
     sg_name = "eks-control-plane"
     project_name = var.project_name
     environment = var.environment
@@ -24,7 +24,7 @@ module "eks_control_plane_sg" {
 }
 # create mysql security group
 module "mysql_sg" {
-    source = "git::https://github.com/divyavut/terraform-aws-sg-module.git?ref=main"
+    source = "git::https://github.com/divyavut/terraform-aws-sg.git?ref=main"
     sg_name = "mysql"
     project_name = var.project_name
     environment = var.environment
@@ -33,7 +33,7 @@ module "mysql_sg" {
 }
 # create bastion security group
 module "bastion_sg" {
-    source = "git::https://github.com/divyavut/terraform-aws-sg-module.git?ref=main"
+    source = "git::https://github.com/divyavut/terraform-aws-sg.git?ref=main"
     sg_name = "bastion"
     project_name = var.project_name
     environment = var.environment
