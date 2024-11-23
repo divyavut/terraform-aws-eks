@@ -16,7 +16,7 @@ variable "common_tags" {
 
 
 variable "zone_name" {
-    default = "divyavutakanti.com"
+    default = "dev.divyavutakanti.com"
 }
 
 variable "zone_id" {

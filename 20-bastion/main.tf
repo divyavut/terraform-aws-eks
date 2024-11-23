@@ -4,8 +4,8 @@ module "ec2_instance" {
   name = local.resource_name
   instance_type          = "t3.micro"
   vpc_security_group_ids = [local.bastion_sg_id]
-  subnet_id              = local.public_subnet_ids
- 
+  subnet_id              = local.public_subnet_id
+  user_data = file("bastion.sh")
   tags = {
         Name = local.resource_name
   }

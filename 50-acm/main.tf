@@ -5,7 +5,7 @@ resource "aws_acm_certificate" "expense" {
   tags = merge(
     var.common_tags,
     {
-        Name = local.resource_name #expense-dev
+        Name = local.resource_name #expense-dev-acm
     }
   )
 }

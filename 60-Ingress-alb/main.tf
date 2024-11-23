@@ -99,7 +99,7 @@ resource "aws_lb_listener_rule" "frontend" {
 
   condition {
     host_header {
-      values = ["expense-${var.environment}.${var.zone_name}"] #expense-dev.divyavutakanti.com
+      values = ["expense-${var.environment}.${var.zone_name}"] #expense-dev.dev.divyavutakanti.com
   }
 }
 }
